@@ -19,3 +19,8 @@ class Account :
             print("##돈이 부족합니다##") 
         else
             self.money -= money'''
+
+        if self.money < money:
+            print("##돈이 부족합니다##")
+        else:
+            self.money -= money
