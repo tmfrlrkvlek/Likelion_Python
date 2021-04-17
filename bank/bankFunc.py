@@ -1,9 +1,9 @@
 # 은행의 기능들을 모아놓은 python 파일입니다.
 from .account import Account                         
 
-accountList = []                        # 개설된 계좌 모음
+accountList = []                            # 개설된 계좌 모음
 
-def printMenu() :                       # BankMenu 출력하기
+def printMenu() :                           # BankMenu 출력하기
     print("======Bank Menu======")
     print("1. 계좌개설")
     print("2. 입금하기")
@@ -12,14 +12,14 @@ def printMenu() :                       # BankMenu 출력하기
     print("5. 종료하기")
     print("=====================")
 
-def doFunc(order) :                     # 은행의 각 기능들로 연결
-    if order == 1 :                     # 계좌개설
+def doFunc(order) :                         # 은행의 각 기능들로 연결
+    if order == 1 :                         # 계좌개설
         makeAccount()
-    elif order == 2 :                   # 입금하기
+    elif order == 2 :                       # 입금하기
         deposit()                 
-    elif order == 3 :                   # 출금하기
+    elif order == 3 :                       # 출금하기
         withdraw()
-    elif order == 4 :                   # 전체조회
+    elif order == 4 :                       # 전체조회
         checkList()
     elif order == 5 :
         return 0
