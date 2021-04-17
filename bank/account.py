@@ -13,7 +13,6 @@ class Account :
         self.money += money
     
     def real_withdraw(self, money):                 # 출금
-        ### 구현할 기능 1-2 ###
         if self.money < money:
             print("##돈이 부족합니다##")
         else:
