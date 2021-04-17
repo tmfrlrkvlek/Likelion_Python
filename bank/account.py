@@ -14,12 +14,6 @@ class Account :
     
     def real_withdraw(self, money):                 # 출금
         ### 구현할 기능 1-2 ###
-        ''' 아래 '돈이 부족하다면' 부분을 조건으로 바꾸고 기능을 완성
-        if 돈이 부족하다면 : 
-            print("##돈이 부족합니다##") 
-        else
-            self.money -= money'''
-
         if self.money < money:
             print("##돈이 부족합니다##")
         else:
