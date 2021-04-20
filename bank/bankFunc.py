@@ -78,7 +78,7 @@ def withdraw():                             # 출금하기
         print("##존재하지 않는 계좌번호입니다##")
     print("==================")
 
-def transfer():
+def transfer():                             # 이체하기
     print("======이체하기======")
     accountNum = int(input("출금하실 계좌번호를 입력해주세요 : "))
     accountTo = findCustomer(accountNum, 0)
