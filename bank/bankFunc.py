@@ -45,7 +45,7 @@ def makeAccount():                          # 계좌개설
     print("##계좌개설을 완료하였습니다##")
     print("==================")
 
-def deleteAccount():
+def deleteAccount():                        # 계좌삭제
     print("======계좌삭제======")
     accountNum = int(input("삭제할 계좌번호를 입력해주세요 : "))
     account = findCustomer(accountNum)
@@ -55,8 +55,6 @@ def deleteAccount():
         if check_last == 1 :
             accountList.remove(account)
             print("##계좌삭제를 완료하였습니다##")
-        # else :
-        #     pass
     else :
         print("##존재하지 않는 계좌번호입니다##")       
     print("==================")
