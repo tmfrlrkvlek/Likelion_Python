@@ -9,7 +9,8 @@ def printMenu() :                           # BankMenu 출력하기
     print("2. 입금하기")
     print("3. 출금하기")
     print("4. 전체조회")
-    print("5. 종료하기")
+    print("5. 계좌삭제")
+    print("6. 종료하기")
     print("=====================")
 
 def doFunc(order) :                         # 은행의 각 기능들로 연결
@@ -22,6 +23,8 @@ def doFunc(order) :                         # 은행의 각 기능들로 연결
     elif order == 4 :                       # 전체조회
         checkList()
     elif order == 5 :
+        deleteAccount()
+    elif order == 6 :
         return 0
     else :
         print("##잘못 입력하셨습니다##")
@@ -40,6 +43,22 @@ def makeAccount():                          # 계좌개설
     account = Account(accountNum, name, money)    
     accountList.append(account)
     print("##계좌개설을 완료하였습니다##")
+    print("==================")
+
+def deleteAccount():
+    print("======계좌삭제======")
+    accountNum = int(input("삭제할 계좌번호를 입력해주세요 : "))
+    account = findCustomer(accountNum)
+    if account :
+        checkAccount(account)
+        check_last = int(input("위 계좌를 진짜 삭제하시려면 1을 입력해주세요 : "))
+        if check_last == 1 :
+            accountList.remove(account)
+            print("##계좌삭제를 완료하였습니다##")
+        # else :
+        #     pass
+    else :
+        print("##존재하지 않는 계좌번호입니다##")       
     print("==================")
 
 def deposit():                              # 입금하기
